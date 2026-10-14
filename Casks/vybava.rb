@@ -3,29 +3,31 @@ cask "vybava" do
   preflight_steps do
     on_macos do
       run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/vybava"]
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/lupa-engine"]
     end
   end
 
-  version "0.104.0"
+  version "0.107.0"
 
   on_macos do
-    on_arm do
-      sha256 "ff2c77e0efcbbf6d25d73c59f1b01d178c5daea18878f178777fc5e6c6dca0d0"
-      url "https://apps.fixit.app/releases/vybava-darwin-arm64/#{version}/vybava_#{version}_darwin_arm64.tar.gz"
-    end
     on_intel do
-      sha256 "92a45ed30b8e2e5ec8e0b01ee0f11b12f17cc19477d8837a2158f9c9e7cc4437"
+      sha256 "f2ccd4248db897ad87ee47601efec88669ac9da618d065283be49da080686746"
       url "https://apps.fixit.app/releases/vybava-darwin-amd64/#{version}/vybava_#{version}_darwin_amd64.tar.gz"
     end
-  end
-  on_linux do
     on_arm do
-      sha256 "49ebfb3d0fe25228c214b5fa99f0110221cd6cf92b7798fb4520d2ae85e25aec"
-      url "https://apps.fixit.app/releases/vybava-linux-arm64/#{version}/vybava_#{version}_linux_arm64.tar.gz"
+      sha256 "e036caa680ff268199dd7796c523ec7348a2a654a8a99fb85047ee9c53beb11a"
+      url "https://apps.fixit.app/releases/vybava-darwin-arm64/#{version}/vybava_#{version}_darwin_arm64.tar.gz"
     end
+  end
+
+  on_linux do
     on_intel do
-      sha256 "e05c9f5bbd6423360adf7f5a5421bd017f6448ed0665f9aaf0b2cd54357e7a28"
+      sha256 "44cb268e0208a2f7daa7a7b03cf62bea731de1e5481681112e45a3c5c0aea654"
       url "https://apps.fixit.app/releases/vybava-linux-amd64/#{version}/vybava_#{version}_linux_amd64.tar.gz"
+    end
+    on_arm do
+      sha256 "7cdfcc5385cc0715b74be143744d6d9e141bc6bee3610849de45b61cd5dd7d06"
+      url "https://apps.fixit.app/releases/vybava-linux-arm64/#{version}/vybava_#{version}_linux_arm64.tar.gz"
     end
   end
 
@@ -40,4 +42,5 @@ cask "vybava" do
   binary "vybava"
 
   # No zap stanza required
+
 end
