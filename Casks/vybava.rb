@@ -6,26 +6,26 @@ cask "vybava" do
     end
   end
 
-  version "0.201.0"
+  version "0.203.0"
 
   on_macos do
     on_intel do
-      sha256 "0f10fdfed496b8df51ddecb9f6c24fe54a4d4dd4c5c132f1f867b199e3b17832"
+      sha256 "86aa2f019e9d18f49f6da0f4263555678e45512dbb123053484e71f1111ad68b"
       url "https://apps.fixit.app/releases/vybava-darwin-amd64/#{version}/vybava_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "8139c28f36ba0b73ed509f49ea80b8eb06d81c9851e2689ab74fcc3cfa2a1164"
+      sha256 "7b6dae116569bca64534cecd1849cec09b6de735cbcd979b1df8914a7196beb8"
       url "https://apps.fixit.app/releases/vybava-darwin-arm64/#{version}/vybava_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "9aa50be7cddc8f08f5531fbb0e4eca3092444ced4113c22a15150d2115d52a6a"
+      sha256 "57c4bd8ead37022998b84bda533c4869d9f019139aa85a6595a7195a0bc15f6a"
       url "https://apps.fixit.app/releases/vybava-linux-amd64/#{version}/vybava_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "f260fc16cbacb7ade8830b5475ed13de439927c9c5614aec62d0380301eba37e"
+      sha256 "2c409a013f23dc0740c58ef47ec4c1a4228c1f650ec400d65c63115871190f6e"
       url "https://apps.fixit.app/releases/vybava-linux-arm64/#{version}/vybava_#{version}_linux_arm64.tar.gz"
     end
   end
