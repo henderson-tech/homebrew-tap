@@ -1,7 +1,7 @@
 # FixIt Technologies Homebrew Tap
 
-This private repository distributes signed-off release artifacts from FixIt
-Technologies projects through Homebrew.
+This public repository holds generated Homebrew casks for signed-off FixIt
+Technologies tool releases.
 
 - Casks are generated and published by upstream GoReleaser pipelines.
 - Never put release binaries or credentials in this repository.
