@@ -1,27 +1,18 @@
 # FixIt Technologies Homebrew Tap
 
-Private Homebrew distribution for FixIt Technologies engineering tools.
+Homebrew tap for FixIt Technologies engineering tools: generated casks for
+signed-off releases.
 
 ## Prerequisites
 
-Authenticate GitHub CLI and let Git use its credential helper:
-
-```sh
-gh auth login
-gh auth setup-git
-```
-
-Because both the tap and release repositories are private, expose a GitHub
-token with read access while Homebrew downloads release assets:
-
-```sh
-export HOMEBREW_GITHUB_API_TOKEN="$(gh auth token)"
-```
+Connect to the team's WireGuard mesh before installing or updating: release
+downloads answer only on the mesh (off-mesh: HTTP 403). The current install
+needs no GitHub authentication.
 
 ## Install Výbava
 
 ```sh
-brew install --cask FixIt-Technologies/tap/vybava
+brew install --cask henderson-tech/tap/vybava
 ```
 
 After the tap is installed, normal lifecycle commands are short:
